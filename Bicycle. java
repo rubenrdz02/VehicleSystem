@@ -1,0 +1,33 @@
+public class Bicycle extends Vehicle {
+    private boolean hasBell;
+
+    // Constructor
+    public Bicycle(int speed, double fuel, boolean hasBell) {
+        super(speed, fuel);
+        this.hasBell = hasBell;
+    }
+
+    // Override start method
+    @Override
+    public void start() {
+        System.out.println("Pedal away! The bicycle has started.");
+    }
+
+    // Unique method for Bicycle
+    public void ringBell() {
+        if (hasBell) {
+            System.out.println("Ring Ring!");
+        } else {
+            System.out.println("This bicycle has no bell.");
+        }
+    }
+
+    // Getters and setters
+    public boolean getHasBell() {
+        return hasBell;
+    }
+
+    public void setHasBell(boolean hasBell) {
+        this.hasBell = hasBell;
+    }
+}
